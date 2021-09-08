@@ -35,9 +35,17 @@ public class TestMaximum <T extends Comparable<T>> {
 	            max = element;
 	        }
 	    }
+	    printMax(max,values);
 	    return max;
 	}
 	
+	private static <T extends Comparable<T>>  void printMax(T max, T ...values) {
+		System.out.println("Maximum of ");
+		for(T t : values) {
+			System.out.print(t+" ");
+		}
+		System.out.println("is " + max);
+	}
 	
 
 }
