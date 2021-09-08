@@ -1,22 +1,34 @@
 package com.maxvalue;
 
-public class TestMaximum {
+//class with generic
+public class TestMaximum <T extends Comparable<T>> {
 	
-	private static String a,b,c;
+	private T a,b,c;
 	
-	TestMaximum(String a, String b, String c){
+	//constructor with generic
+	TestMaximum(T a, T b, T c){
 		this.a = a;
 		this.b = b;
 		this.c= c;
 	}
 	
+	/**
+	 * @method to get maximum
+	 */
 	public void maximum() {
-		String res=TestMaximum.findMaximum(a,b,c);
+		T res=TestMaximum.findMaximum(a,b,c);
 		System.out.println("Maximum of "+a+", "+b+" and "+c+" is: " +res);
 	}
 	
-	public static String findMaximum(String a, String b, String c) {
-		String max = a;
+	/**
+	 * @param <T>
+	 * @param a
+	 * @param b
+	 * @param c
+	 * @return max element
+	 */
+	public static <T extends Comparable<T>> T findMaximum(T a, T b, T c) {
+		T max = a;
 		if(b.compareTo(max) > 0) {
 			max = b;
 		}
