@@ -2,21 +2,21 @@ package com.maxvalue;
 
 public class TestMaximum {
 	
-	private static Float a,b,c;
+	private static String a,b,c;
 	
-	TestMaximum(Float a, Float b, Float c){
+	TestMaximum(String a, String b, String c){
 		this.a = a;
 		this.b = b;
 		this.c= c;
 	}
 	
 	public void maximum() {
-		Float res=TestMaximum.findMaximum(a,b,c);
+		String res=TestMaximum.findMaximum(a,b,c);
 		System.out.println("Maximum of "+a+", "+b+" and "+c+" is: " +res);
 	}
 	
-	public static Float findMaximum(Float a, Float b, Float c) {
-		Float max = a;
+	public static String findMaximum(String a, String b, String c) {
+		String max = a;
 		if(b.compareTo(max) > 0) {
 			max = b;
 		}
